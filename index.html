@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Mini Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        
+    </head>
+    
+    
+    <body onload="start()">
+    <div id="container" class="container-fluid">
+       
+    <div class="row">
+        <div id="highestScore" class="col-xs-4">
+            <p>Highest Score</p>
+            <p id="highScore"></p>
+            </div>
+        
+        <div id="playerName" class="col-xs-4"></div>
+        
+           <div id="score" class="col-xs-4"></div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">   
+        <button id="stopBtn" type="button" class="btn btn-danger btn-lg">STOP</button>
+        </div>
+    </div>
+        <br/>
+        <div class="row">
+    <div class="col-xs-12" id="message">
+            <p>Click on the stop button to save your score!</p>
+            </div></div>        
+        
+    <button id="btn1" onclick="changePic()">
+        </button>
+   
+    <div class="row">    
+     <svg version="1.1" id="blue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 414.822 414.822" style="enable-background:new 0 0 414.822 414.822;" xml:space="preserve">
+    <g>
+        <path style="fill:#5394F2;" d="M174.48,207.412L174.48,207.412l-40.983,0c-48.097,0-87.088-38.991-87.088-87.088v0h40.983
+            C135.489,120.324,174.48,159.314,174.48,207.412z"/>
+        <path style="fill:#5394F2;" d="M174.48,207.412L174.48,207.412l-40.983,0c-48.097,0-87.088,38.991-87.088,87.088v0h40.983
+            C135.489,294.5,174.48,255.509,174.48,207.412z"/>
+        <path style="fill:#3380DD;" d="M368.413,207.411c0,6.077-0.261,12.089-0.782,18.036h-0.772c-6.859,0-13.066,2.783-17.571,7.278
+            c-4.495,4.495-7.277,10.712-7.277,17.571h21.963c-7.315,34.787-23.34,66.354-45.694,92.328
+            c-38.035,44.205-94.385,72.199-157.278,72.199V0c62.893,0,119.242,27.994,157.278,72.199
+            C349.521,108.503,368.413,155.742,368.413,207.411z"/>
+        <path style="fill:#5394F2;" d="M368.413,207.411c0,6.077-0.261,12.089-0.782,18.036h-0.772c-6.859,0-13.066,2.783-17.571,7.278
+            c-4.495,4.495-7.277,10.712-7.277,17.571h21.963c-7.315,34.787-23.34,66.354-45.694,92.328
+            c-31.251-36.304-50.143-83.543-50.143-135.212s18.892-98.908,50.143-135.212C349.521,108.503,368.413,155.742,368.413,207.411z"/>
+        <path style="fill:#5394F2;" d="M258.33,303.684L258.33,303.684l-24.401,0c-28.637,0-51.851,23.215-51.851,51.851v0h24.401
+            C235.115,355.536,258.33,332.321,258.33,303.684z"/>
+        <g>
+            <circle style="fill:#FFFFFF;" cx="312.512" cy="207.412" r="22.929"/>
+            <circle style="fill:#4D4D4D;" cx="312.512" cy="207.412" r="14.029"/>
+        </g>
+    </g>
+
+    </svg>
+            </div>
+        
+    <div class="row">
+    <svg version="1.1" id="green" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 390 390" style="enable-background:new 0 0 390 390;" xml:space="preserve">
+<g id="XMLID_859_">
+	<path id="XMLID_860_" style="fill:#91DC5A;" d="M368.4,195c30-20,20-60,20-60c-60,0-80,60-80,60s20,60,80,60
+		C388.4,255,398.4,215,368.4,195z"/>
+	<path id="XMLID_861_" style="fill:#64C37D;" d="M110,115c0,0,20-50,110-40v60L110,115z"/>
+	<path id="XMLID_862_" style="fill:#64C37D;" d="M110,275c0,0,20,50,110,40v-60L110,275z"/>
+	<path id="XMLID_863_" style="fill:#C2FB3B;" d="M330,195c0,0-60,90-160,90C40,285,0,195,0,195s40-90,170-90
+		C270,105,330,195,330,195z"/>
+	<path id="XMLID_864_" style="fill:#91DC5A;" d="M190,106.226c-6.477-0.789-13.141-1.226-20-1.226C40,105,0,195,0,195s40,90,170,90
+		c6.859,0,13.523-0.437,20-1.226V106.226z"/>
+	<circle id="XMLID_865_" style="fill:#FFF6D2;" cx="90" cy="195" r="30"/>
+	<circle id="XMLID_866_" cx="90" cy="195" r="15"/>
+	<path id="XMLID_15_" style="fill:#64C37D;" d="M240,195c0,27.614-22.386,50-50,50v-50C190,195,216.192,195,240,195z"/>
+</g>
+
+</svg>
+
+    </div>
+        
+    <div class="row">
+    <svg version="1.1" id="yellow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 444.179 444.179" style="enable-background:new 0 0 444.179 444.179;" xml:space="preserve">
+<g>
+	<path style="fill:#F9D25B;" d="M444.179,197.119c-31.63,31.61-71.51,49.9-112.72,54.87c-7.68,0.93-15.41,1.4-23.14,1.4
+		c-2.04,0-4.09-0.03-6.13-0.1c-21.7-0.69-43.31-5.03-63.82-13.03c-24.01-9.37-46.52-23.75-65.91-43.14
+		c43.42-43.42,102.44-61.72,159-54.88C372.669,147.209,412.549,165.499,444.179,197.119z"/>
+	<path style="fill:#F9D25B;" d="M175.198,197.804L175.198,197.804c-45.043,0-81.558,36.515-81.558,81.558v93.641h0
+		c45.043,0,81.558-36.515,81.558-81.558V197.804z"/>
+	<path style="fill:#F9D25B;" d="M175.198,197.804L175.198,197.804c0-45.043-36.515-81.558-81.558-81.558H0v0
+		c0,45.043,36.515,81.558,81.558,81.558H175.198z"/>
+	<path style="fill:#F7B66F;" d="M444.177,197.114c-31.625,31.614-71.512,49.909-112.716,54.872
+		c-8.099-16.57-12.631-35.191-12.631-54.872s4.533-38.302,12.631-54.873C372.664,147.206,412.552,165.501,444.177,197.114z"/>
+	<path style="fill:#F9D25B;" d="M316.617,143.622L316.617,143.622c0-40.011-32.435-72.446-72.446-72.446h-83.178v0
+		c0,40.011,32.435,72.446,72.446,72.446H316.617z"/>
+	<g>
+		<circle style="fill:#FFFFFF;" cx="369.324" cy="197.115" r="30.244"/>
+		<circle style="fill:#4D4D4D;" cx="369.324" cy="197.115" r="18.504"/>
+	</g>
+	<path style="fill:#DDB850;" d="M302.209,253.279l-0.02,0.01c-21.7-0.69-43.31-5.03-63.82-13.03
+		c6.12-4.89,28.526-15.182,39.426-11.732c17.02,5.39,9.994-1.008,9.994-1.008L302.209,253.279z"/>
+	<path style="fill:#F9D25B;" d="M287.793,227.517L287.793,227.517c-27.364,0-49.547,22.183-49.547,49.547v56.887h0
+		c27.364,0,49.547-22.183,49.547-49.547V227.517z"/>
+</g>
+
+</svg>
+
+        </div>
+    </div>
+        <script src="script.js">
+        </script>
+        
+    </body>
+</html>
